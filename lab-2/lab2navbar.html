@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umair Kaleem - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1 id="greeting">Hello, I'm Umair</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#office-hours" id="nav-office-hours">Office Hours</a></li>
+        <li><a href="#feedback" id="nav-feedback">Send Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section id="office-hours" aria-labelledby="office-hours-heading">
+      <h2 id="office-hours-heading">Office Hours</h2>
+
+      <table>
+        <caption>Weekly availability for student consultations</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Start</th>
+            <th scope="col">End</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td><time datetime="10:00">10:00 AM</time></td>
+            <td><time datetime="12:00">12:00 PM</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td><time datetime="14:00">2:00 PM</time></td>
+            <td><time datetime="16:00">4:00 PM</time></td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td><time datetime="11:00">11:00 AM</time></td>
+            <td><time datetime="13:00">1:00 PM</time></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+  <svg role="img" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <title>Clock icon indicating office hours</title>
+    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+    <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <figcaption>Office hours are shown in your local time.</figcaption>
+</figure>
+    </section>
+
+    <svg aria-hidden="true" width="100%" height="20" viewBox="0 0 200 20" preserveAspectRatio="none">
+      <line x1="0" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/>
+    </svg>
+
+    <section id="feedback" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Send Feedback</h2>
+
+      <form action="#" method="post">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-describedby="email-hint"
+          />
+          <p id="email-hint" class="hint">We'll never share your email with anyone else.</p>
+        </div>
+
+        <fieldset>
+          <legend>Topic</legend>
+
+          <div class="radio-row">
+            <input type="radio" id="topic-general" name="topic" value="general" required />
+            <label for="topic-general">General</label>
+          </div>
+
+          <div class="radio-row">
+            <input type="radio" id="topic-bug" name="topic" value="bug" />
+            <label for="topic-bug">Bug Report</label>
+          </div>
+
+          <div class="radio-row">
+            <input type="radio" id="topic-feature" name="topic" value="feature" />
+            <label for="topic-feature">Feature Request</label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>
+      Contact: <a href="mailto:umairkaleem017@gmail.com">umairkaleem017@gmail.com</a><br />
+      <a href="https://linkedin.com/in/umair-kaleem-918386326" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </address>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
