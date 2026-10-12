@@ -1,0 +1,289 @@
+/* External stylesheet  */
+
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #222;
+    line-height: 1.5;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+.task-section {
+    margin: 24px 0;
+    padding: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.intro {
+    text-align: center;
+}
+
+/* Task 1: ID selector, shared class, and external CSS button */
+#box {
+    background-color: blue;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+.heading {
+    color: red;
+}
+
+.external-button {
+    background-color: green;
+    color: white;
+}
+
+/* Task 2: centered, capitalized heading */
+.center-capitalize {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Task 3: font-size units */
+.outer-unit {
+    font-size: 25px;
+    padding: 10px;
+    background-color: #eeeeee;
+}
+
+.inner-unit {
+    font-size: 10px;
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #d9eaff;
+}
+
+
+.navbar {
+    min-height: 60px;
+    background-color: #0f1111;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 18px;
+    padding: 8px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #f08804;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.search-form {
+    display: flex;
+    gap: 5px;
+}
+
+.search-form input {
+    width: 150px;
+    padding: 7px;
+}
+
+.search-form button {
+    background-color: #f08804;
+    border: none;
+    padding: 7px 12px;
+    cursor: pointer;
+}
+
+/* Task 5: three 100px boxes and a circle */
+.boxes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.box-shape {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+}
+
+.shape-one {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.shape-two {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+.shape-three {
+    background-color: rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+}
+
+/* Task 6: fixed banner on the right, kept above other content */
+.nature-banner {
+    position: fixed;
+    right: 0;
+    top: 45%;
+    z-index: 100;
+    width: 135px;
+    padding: 18px 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(rgba(0, 70, 20, 0.55), rgba(0, 70, 20, 0.55)),
+                      url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Task 7: center one div inside another with Flexbox */
+.flex-outer {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    border: 2px solid #555;
+}
+
+.flex-inner {
+    padding: 18px;
+    background-color: #0f6cbf;
+    color: white;
+    align-self: center;
+}
+
+
+/* Task 8 */
+.responsive-box {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 299px) {
+    .responsive-box {
+        background-color: green;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .responsive-box {
+        background-color: pink;
+        color: black;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .responsive-box {
+        background-color: red;
+    }
+}
+
+
+/* Task 9: transition and transform on hover */
+.hover-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f6cbf;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hover-button:hover {
+    font-size: 22px;
+    transform: rotate(4deg);
+}
+
+/* Task 10: circular loader animated with keyframes */
+.loader {
+    width: 65px;
+    height: 65px;
+    border: 8px solid #dddddd;
+    border-top: 8px solid #0f6cbf;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer */
+footer {
+    padding: 16px;
+    text-align: center;
+    color: white;
+    background-color: #0f1111;
+}
+
+/* Small-screen layout support */
+@media (max-width: 500px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .search-form input {
+        width: 115px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .nature-banner {
+        width: 100px;
+        font-size: 14px;
+    }
+}

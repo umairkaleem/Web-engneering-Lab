@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">CSS Lab</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#tasks">Tasks</a>
+                <a href="#about">About</a>
+            </div>
+            <form class="search-form" action="#">
+                <input type="search" placeholder="Search">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <main id="home">
+        <h1 class="heading">CSS Fundamentals Lab 03</h1>
+        <p class="intro">This page demonstrates the ten tasks from the Web Engineering CSS lab.</p>
+
+        <!-- Task 1 -->
+        <section id="task1" class="task-section">
+            <h2>Task 1: CSS Methods and Selectors</h2>
+            <div id="box">This div has a blue background using its ID selector.</div>
+            <h1 class="heading">Heading 1</h1>
+            <h2 class="heading">Heading 2</h2>
+            <h3 class="heading">Heading 3</h3>
+            <button class="external-button">Green button (external CSS)</button>
+            <button class="internal-button">Blue button (internal CSS)</button>
+            <button class="inline-button" style="background-color: pink; color: black;">Pink button (inline CSS)</button>
+        </section>
+
+        <!-- Task 2 -->
+        <section id="task2" class="task-section">
+            <h2>Task 2: Text Styling</h2>
+            <h3 class="center-capitalize">this heading is centred and capitalised</h3>
+            <p>The whole document uses Times New Roman.</p>
+        </section>
+
+        <!-- Task 3 -->
+        <section id="task3" class="task-section">
+            <h2>Task 3: em and rem Units</h2>
+            <div class="outer-unit">
+                Outer div: this text uses relative units.
+                <div class="inner-unit">Inner div: this text uses relative units.</div>
+            </div>
+            <p><strong>Difference:</strong> em is relative to the parent font size when used for font-size; rem is relative to the root HTML font size.</p>
+        </section>
+
+        <!-- Task 4 is demonstrated by the navbar at the top of the page. -->
+
+        <!-- Task 5 -->
+        <section id="task5" class="task-section">
+            <h2>Task 5: Box Model and Opacity</h2>
+            <div class="boxes">
+                <div class="box-shape shape-one">Box 1</div>
+                <div class="box-shape shape-two">Box 2</div>
+                <div class="box-shape shape-three">Circle</div>
+            </div>
+        </section>
+
+        <!-- Task 6 -->
+        <section id="task6" class="task-section">
+            <h2>Task 6: Fixed Nature Banner</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae nibh at lorem blandit commodo.</p>
+            <p>Scroll the page to see the “Love Nature” banner stay fixed at the right edge.</p>
+            <div class="nature-banner">Love Nature</div>
+        </section>
+
+        <!-- Task 7 -->
+        <section id="task7" class="task-section">
+            <h2>Task 7: Flexbox Alignment</h2>
+            <div class="flex-outer">
+                <div class="flex-inner">Centered div</div>
+            </div>
+            <p><strong>Priority:</strong> align-self controls an individual flex item and overrides the parent's align-items for that item.</p>
+        </section>
+
+     
+<!-- Task 8 -->
+<section id="task8" class="task-section">
+    <h2>Task 8: Responsive Media Queries</h2>
+    <div class="responsive-box">
+        Resize the browser to see the color change.
+    </div>
+</section>
+
+
+        <!-- Task 9 -->
+        <section id="task9" class="task-section">
+            <h2>Task 9: Hover Transition and Transform</h2>
+            <button class="hover-button">Hover over me</button>
+        </section>
+
+        <!-- Task 10 -->
+        <section id="task10" class="task-section">
+            <h2>Task 10: Loading Animation</h2>
+            <div class="loader" aria-label="Loading"></div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <p>Web Engineering — Lab 03: CSS Fundamentals</p>
+    </footer>
+
+    <!-- Internal CSS is used only for Task 1's blue button, as requested. -->
+    <style>
+        .internal-button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</body>
+</html>
