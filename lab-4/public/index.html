@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MY Office! | Office Hours</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <h1>Welcome!</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="nav-link" href="#schedule" aria-current="location">Office Hours</a></li>
+        <li><a class="nav-link" href="#feedback">Send Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="schedule" aria-labelledby="schedule-title">
+      <h2 id="schedule-title" class="span-all">Office Hours</h2>
+
+      <table>
+        <caption>Weekly office hours</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Location</th>
+            <th scope="col">Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Monday</th>
+            <td>10:00–11:00</td>
+            <td>Room 214</td>
+            <td>
+              <button type="button" data-day="Monday" aria-label="Select Monday">Select</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td>14:00–15:00</td>
+            <td>Room 214</td>
+            <td>
+              <button type="button" data-day="Wednesday" aria-label="Select Wednesday">Select</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <figure>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+        </svg>
+        <figcaption class="text-muted">All office hours are held in Room 214.</figcaption>
+      </figure>
+
+      <p id="status" role="status" class="span-all text-muted"></p>
+    </section>
+
+    <section id="feedback" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">Send Feedback</h2>
+      <form action="#" method="post">
+        <p>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" autocomplete="name" />
+        </p>
+        <p>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" />
+          <small id="email-hint" class="text-muted">We will only use this to reply to you.</small>
+        </p>
+
+        <fieldset class="span-all">
+          <legend>Topic</legend>
+          <label><input type="radio" name="topic" value="question" checked /> Question</label>
+          <label><input type="radio" name="topic" value="bug" /> Problem</label>
+          <label><input type="radio" name="topic" value="other" /> Other</label>
+        </fieldset>
+
+        <p class="span-all">
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message" rows="4"></textarea>
+        </p>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
