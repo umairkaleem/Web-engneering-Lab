@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Feedback</title>
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Send Feedback</h1>
+    <form id="feedback-form" novalidate>
+      <div class="form-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required aria-describedby="name-error">
+          <small id="name-error" class="error-message"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required aria-describedby="email-error email-help">
+          <small id="email-error" class="error-message"></small>
+          <small id="email-help" class="help-text">We will only use this to reply to you.</small>
+        </div>
+      </div>
+      <fieldset>
+        <legend>Topic</legend>
+        <label class="radio-label"><input type="radio" name="topic" value="Lab content" checked> Lab content</label>
+        <label class="radio-label"><input type="radio" name="topic" value="Something else"> Something else</label>
+      </fieldset>
+      <div class="field message-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+      <button type="submit">Send feedback</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script type="module" src="public/main.js"></script>
+  <script type="module" src="public/feedback.js"></script>
+</body>
+</html>
