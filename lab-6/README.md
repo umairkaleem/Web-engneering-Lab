@@ -1,7 +1,4 @@
-# Web Engineering Lab 06 — All 12 Class Tasks
-
-This project contains starter/solution files for **all 12 tasks** in *Rendering Strategies and the React Mental Model*.
-
+# Web Engineering Lab 06
 ## Task coverage
 1. `demo/page.mjs`, `demo/build-static.mjs`, and generated `demo/dist/ssg.html`.
 2. `demo/server.mjs` provides `/csr`, `/ssr`, `/ssg`, `/isr`, and `/stream`.
