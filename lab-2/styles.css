@@ -1,3 +1,27 @@
+/* Base Reset & Layout */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+}
+
+header, section, footer {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Skip Link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -7,12 +31,14 @@
   padding: 8px 16px;
   z-index: 100;
   transition: top 0.2s ease-in-out;
+  text-decoration: none;
 }
 
 .skip-link:focus {
   top: 0;
 }
 
+/* Focus Visible Accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -21,9 +47,43 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+/* Forms */
 .hint {
   font-size: 0.85rem;
-  color: #555;
+  color: #6c757d;
+  margin-top: 0.25rem;
 }
 
 .form-row {
@@ -32,12 +92,48 @@ textarea:focus-visible {
   margin-bottom: 1rem;
 }
 
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
 .radio-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 fieldset {
   margin-bottom: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #0b63ce;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+button[type="submit"]:hover {
+  background-color: #084aa1;
+}
+
+footer address {
+  font-style: normal;
 }
